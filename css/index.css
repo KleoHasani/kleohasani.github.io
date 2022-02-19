@@ -1,8 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+:root {
+  --font-logo: "Cedarville Cursive", cursive;
+  --font-title: "Pacifico", cursive;
+  --background: dodgerblue;
+  --surface: #fefefe;
+}
+
 * {
   margin: 0em;
   padding: 0em;
 }
 
-p {
-  color: red;
+html {
+  height: 100vh;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: var(--background);
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  font-size: xx-large;
+  color: var(--surface);
+  position: fixed;
+  top: 0em;
+  left: 0em;
+  right: 0em;
+}
+
+section {
+  height: 100vh;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: var(--font-logo);
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  margin: 0.5em 1em;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  color: var(--surface);
+  border-radius: 50%;
+  padding: 0.2em;
+  margin: 0.5em 1em;
+}
+
+.arrow {
+  width: 0.5em;
+  height: 0.5em;
+  width: 100%;
+  margin: 0.3em 0em;
+  position: absolute;
+  left: 0em;
+  right: 0em;
+  bottom: 0em;
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--background);
+  color: var(--surface);
+  font-family: var(--font-title);
+  font-size: 6vh;
+}
+
+#work {
+  background: var(--surface);
 }
