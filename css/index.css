@@ -6,6 +6,31 @@
   --font-title: "Pacifico", cursive;
   --background: dodgerblue;
   --surface: #fefefe;
+  --shadow: #222222 1px 1px 2px;
+}
+
+@keyframes spinup {
+  from {
+    transform: rotateZ(0deg);
+  }
+
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0em);
+  }
+
+  50% {
+    transform: translateY(0.2em);
+  }
+
+  100% {
+    transform: translateY(0em);
+  }
 }
 
 * {
@@ -31,7 +56,7 @@ header {
   width: 100%;
   font-size: xx-large;
   color: var(--surface);
-  position: fixed;
+  position: absolute;
   top: 0em;
   left: 0em;
   right: 0em;
@@ -52,19 +77,36 @@ a {
   flex-direction: row;
   align-items: center;
   font-family: var(--font-logo);
+  text-shadow: var(--shadow);
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   margin: 0.5em 1em;
 }
 
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .icon {
   width: 1em;
   height: 1em;
   color: var(--surface);
+  text-shadow: var(--shadow);
   border-radius: 50%;
   padding: 0.2em;
   margin: 0.5em 1em;
+}
+
+.icon:hover {
+  animation: spinup 0.5s 1;
+}
+
+.icon:active {
+  opacity: 0.6;
 }
 
 .arrow {
@@ -76,6 +118,7 @@ a {
   left: 0em;
   right: 0em;
   bottom: 0em;
+  animation: bounce 1s infinite;
 }
 
 #home {
@@ -85,6 +128,7 @@ a {
   justify-content: center;
   background: var(--background);
   color: var(--surface);
+  text-shadow: var(--shadow);
   font-family: var(--font-title);
   font-size: 6vh;
 }
