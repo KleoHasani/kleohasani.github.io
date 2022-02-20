@@ -56,10 +56,12 @@ header {
   width: 100%;
   font-size: xx-large;
   color: var(--surface);
-  position: absolute;
+  background: var(--background);
+  position: fixed;
   top: 0em;
   left: 0em;
   right: 0em;
+  z-index: 2;
 }
 
 section {
@@ -134,5 +136,10 @@ a {
 }
 
 #work {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background: var(--surface);
+  color: var(--shadow);
 }
