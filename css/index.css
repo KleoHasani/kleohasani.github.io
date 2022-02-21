@@ -57,7 +57,7 @@ header {
   font-size: xx-large;
   color: var(--surface);
   background: var(--background);
-  position: fixed;
+  position: absolute;
   top: 0em;
   left: 0em;
   right: 0em;
@@ -66,6 +66,12 @@ header {
 
 section {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface);
+  color: var(--shadow);
 }
 
 a {
@@ -124,10 +130,6 @@ a {
 }
 
 #home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background: var(--background);
   color: var(--surface);
   text-shadow: var(--shadow);
@@ -136,10 +138,44 @@ a {
 }
 
 #work {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  column-gap: 3em;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  height: auto !important;
+}
+
+.card {
+  width: 300px;
+  min-height: 400px;
+  border-radius: 0.5em;
+  padding: 1em;
+  background: var(--background);
+  color: var(--surface);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: var(--surface);
-  color: var(--shadow);
+  justify-content: space-between;
+}
+
+.card > img {
+  width: 150px;
+  height: 150px;
+  margin: 1em;
+  align-self: center;
+}
+
+.card > .name {
+  font-size: x-large;
+}
+
+.card > .description {
+  font-size: medium;
+}
+
+.card > .links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
