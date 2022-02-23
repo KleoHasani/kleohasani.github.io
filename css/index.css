@@ -129,6 +129,16 @@ a {
   animation: bounce 1s infinite;
 }
 
+.works {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  column-gap: 3em;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 1em 0em;
+}
+
 #home {
   background: var(--background);
   color: var(--surface);
@@ -138,11 +148,7 @@ a {
 }
 
 #work {
-  display: grid;
-  grid-template-columns: repeat(3, 300px);
-  column-gap: 3em;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
   min-height: 100vh;
   height: auto !important;
 }
@@ -156,7 +162,7 @@ a {
   color: var(--surface);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .card > img {
@@ -178,4 +184,233 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+}
+
+/* Extra small devices (phones, 430px and down) */
+@media only screen and (max-width: 430px) {
+  header {
+    font-size: large;
+  }
+
+  .icon {
+    font-size: large;
+  }
+
+  #home {
+    font-size: 4vh;
+  }
+
+  .works {
+    display: grid;
+    grid-template-columns: repeat(1, 230px);
+    row-gap: 2em;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    height: auto !important;
+  }
+
+  .card {
+    width: 230px;
+    justify-self: center;
+  }
+
+  .card > img {
+    width: 100px;
+    height: 100px;
+    margin: 1em;
+    align-self: center;
+  }
+
+  .card > .name {
+    font-size: medium;
+  }
+
+  .card > .description {
+    font-size: small;
+  }
+}
+
+/* Smaller devices (phones, 600px and down) */
+@media only screen and (min-width: 600px) {
+  header {
+    font-size: larger;
+  }
+
+  .icon {
+    font-size: x-large;
+  }
+
+  #home {
+    font-size: 4vh;
+  }
+
+  .works {
+    display: grid;
+    grid-template-columns: repeat(1, 300px);
+    row-gap: 2em;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    height: auto !important;
+  }
+
+  .card {
+    width: 300px;
+    justify-self: center;
+  }
+
+  .card > .name {
+    font-size: large;
+  }
+
+  .card > .description {
+    font-size: medium;
+  }
+
+  .card > img {
+    width: 100px;
+    height: 100px;
+    margin: 1em;
+    align-self: center;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  header {
+    font-size: xx-large;
+  }
+
+  .icon {
+    font-size: xx-large;
+  }
+
+  #home {
+    font-size: 8vh;
+  }
+
+  .works {
+    display: grid;
+    grid-template-columns: repeat(2, 240px);
+    column-gap: 5em;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    height: auto !important;
+  }
+
+  .card {
+    width: 240px;
+    min-height: 300px;
+    height: 320px;
+    justify-self: center;
+  }
+
+  .card > .name {
+    font-size: x-large;
+  }
+
+  .card > .description {
+    font-size: medium;
+  }
+
+  .card > img {
+    width: 100px;
+    height: 100px;
+    align-self: center;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  header {
+    font-size: xx-large;
+  }
+
+  .icon {
+    font-size: xx-large;
+  }
+
+  #home {
+    font-size: 7vh;
+  }
+
+  .works {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    column-gap: 5em;
+    row-gap: 1em;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    height: auto !important;
+  }
+
+  .card {
+    width: 300px;
+    min-height: 350px;
+    height: 380px;
+    justify-self: center;
+  }
+
+  .card > .name {
+    font-size: larger;
+  }
+
+  .card > .description {
+    font-size: medium;
+  }
+
+  .card > img {
+    width: 130px;
+    height: 130px;
+    align-self: center;
+  }
+}
+
+/* Large devices (laptops/desktops, 1026px and up) */
+@media only screen and (min-width: 1026px) {
+  header {
+    font-size: xx-large;
+  }
+
+  .icon {
+    font-size: xx-large;
+  }
+
+  #home {
+    font-size: 6vh;
+  }
+
+  .works {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    column-gap: 5em;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    height: auto !important;
+  }
+
+  .card {
+    width: 300px;
+    min-height: 350px;
+    height: 380px;
+    justify-self: center;
+  }
+
+  .card > .name {
+    font-size: x-large;
+  }
+
+  .card > .description {
+    font-size: large;
+  }
+
+  .card > img {
+    width: 130px;
+    height: 130px;
+    align-self: center;
+  }
 }
