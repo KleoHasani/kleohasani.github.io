@@ -1,8 +1,14 @@
 :root {
+  /* Fonts */
   --font-logo: "Cedarville Cursive", cursive;
   --font-title: "Pacifico", cursive;
-  --background: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
-  --shading: #039be5;
-  --surface: #fefefe;
-  --shadow: #222222 1px 1px 2px;
+  --font-body: "Raleway", sans-serif;
+
+  /* Colors */
+  --primary: #63a4ff;
+  --secondary: #83eaf1;
+  --background: linear-gradient(315deg, var(--primary) 0%, var(--secondary) 74%);
+  --foreground: #fefefe;
+  --surface: #f3feff;
+  --shadow: #222222;
 }

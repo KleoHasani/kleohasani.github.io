@@ -1,5 +1,6 @@
-@import url("_theme.css");
 @import url("_fonts.css");
+@import url("_theme.css");
+
 @import url("_animations.css");
 @import url("_mobile.css");
 
@@ -16,6 +17,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
+  font-family: var(--font-body);
 }
 
 header {
@@ -24,7 +26,7 @@ header {
   justify-content: space-between;
   width: 100%;
   font-size: xx-large;
-  color: var(--surface);
+  color: var(--foreground);
   background: transparent;
   position: absolute;
   top: 0em;
@@ -40,7 +42,7 @@ section {
   align-items: center;
   justify-content: center;
   background: var(--surface);
-  color: var(--shadow);
+  color: var(--primary);
 }
 
 a {
@@ -54,7 +56,7 @@ a {
   flex-direction: row;
   align-items: center;
   font-family: var(--font-logo);
-  text-shadow: var(--shadow);
+  text-shadow: 1px 1px 2px var(--shadow);
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -73,7 +75,7 @@ a {
   height: 1em;
   font-size: xx-large;
   color: var(--surface);
-  text-shadow: var(--shadow);
+  text-shadow: 1px 1px 2px var(--shadow);
   border-radius: 50%;
   padding: 0.2em;
   margin: 0.5em 1em;
@@ -111,7 +113,7 @@ a {
 #home {
   background: var(--background);
   color: var(--surface);
-  text-shadow: var(--shadow);
+  text-shadow: 1px 1px 2px var(--shadow);
   font-family: var(--font-title);
   font-size: 6vh;
 }
@@ -151,8 +153,8 @@ a {
   height: 100%;
   border-radius: 0.5em;
   background: var(--background);
-  color: var(--surface);
-  box-shadow: 1px 2px 10px #222222;
+  color: var(--foreground);
+  box-shadow: 1px 2px 10px var(--shadow);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -170,7 +172,7 @@ a {
 
 .card-back {
   transform: rotateY(180deg);
-  background: var(--shading);
+  background: var(--primary);
 }
 
 .card-back > hr {
