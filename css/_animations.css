@@ -1,0 +1,23 @@
+@keyframes spinup {
+  from {
+    transform: rotateZ(0deg);
+  }
+
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0em);
+  }
+
+  50% {
+    transform: translateY(0.2em);
+  }
+
+  100% {
+    transform: translateY(0em);
+  }
+}

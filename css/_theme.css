@@ -1,0 +1,8 @@
+:root {
+  --font-logo: "Cedarville Cursive", cursive;
+  --font-title: "Pacifico", cursive;
+  --background: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
+  --shading: #039be5;
+  --surface: #fefefe;
+  --shadow: #222222 1px 1px 2px;
+}
