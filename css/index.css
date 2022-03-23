@@ -1,7 +1,9 @@
+/* Imports */
 @import url("./fonts.css");
 @import url("./theme.css");
 @import url("./animations.css");
 
+/* Elements */
 * {
   margin: 0em;
   padding: 0em;
@@ -48,6 +50,7 @@ a {
   align-items: center;
 }
 
+/* Classes */
 .logo {
   display: flex;
   flex-direction: row;
@@ -163,8 +166,11 @@ a {
 }
 
 .card-front > img {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
 
 .card-back {
@@ -187,7 +193,8 @@ a {
   justify-content: space-evenly;
 }
 
-@media only screen and (max-width: 425px) {
+/* Mobile */
+@media only screen and (max-width: 768px) {
   header {
     font-size: x-large;
   }
