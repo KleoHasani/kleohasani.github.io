@@ -1,8 +1,6 @@
 @import url("_fonts.css");
 @import url("_theme.css");
-
 @import url("_animations.css");
-@import url("_mobile.css");
 
 * {
   margin: 0em;
@@ -24,7 +22,6 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%;
   font-size: xx-large;
   color: var(--foreground);
   background: transparent;
@@ -188,4 +185,100 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 425px) {
+  header {
+    font-size: x-large;
+  }
+
+  .icon {
+    font-size: large;
+  }
+
+  #home {
+    font-size: 5vh;
+  }
+
+  .works {
+    display: grid;
+    grid-template-columns: repeat(1, 300px);
+    row-gap: 2em;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 2em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    font-size: xx-large;
+  }
+
+  .icon {
+    font-size: x-large;
+  }
+
+  #home {
+    font-size: 6vh;
+  }
+
+  .works {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 2em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    font-size: xx-large;
+  }
+
+  .icon {
+    font-size: x-large;
+  }
+
+  #home {
+    font-size: 6vh;
+  }
+
+  .works {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 2em;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  header {
+    font-size: xx-large;
+  }
+
+  .icon {
+    font-size: xx-large;
+  }
+
+  #home {
+    font-size: 8vh;
+  }
+
+  .works {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    gap: 3em;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 3em;
+  }
 }
